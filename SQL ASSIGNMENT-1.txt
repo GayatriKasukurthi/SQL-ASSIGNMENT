@@ -1,0 +1,119 @@
+
+ASSIGNMENT 1
+
+1.SELECT * 
+FROM EMP
+WHERE job='clerk'
+
+2.SELECT * 
+FROM EMP
+WHERE job='clerk' OR job='Manager'
+
+3.SELECT GETDATE()
+
+4.SELECT * 
+FROM Emp 
+WHERE SAL BETWEEN 500 AND 1000
+
+5.SELECT * 
+FROM EMP
+WHERE to_char(hire_date,'mon')='DEC'
+
+6.SELECT * 
+FROM EMP
+WHERE SAL NOT IN(1000,2500)
+
+7.SELECT *
+FROM EMP
+WHERE SAL IN(800,950,3000,5000)
+
+8.SELECT *
+FROM EMP
+WHERE ENAME LIKE '_L%'
+
+9.SELECT *
+FROM EMP
+WHERE ENAME LIKE '%D'
+
+11.SELECT *
+FROM EMP
+WHERE ENAME LIKE 'T%R'
+
+12.SELECT *
+FROM EMP
+WHERE ENAME LIKE '%A%'
+
+14.SELECT EMPNO 
+FROM EMP
+WHERE ENAME='james'
+
+15.SELECT SAL 
+FROM EMP
+WHERE JOB='KING'
+
+17.SELECT * 
+FROM emp
+where job='manager'
+
+18.SELECT *
+FROM EMP
+WHERE comm>=0
+
+20.SELECT Sal
+FROM Emp 
+WHERE EName IN('king','blake','ford','smith')
+
+22.SELECT *
+FROM Emp
+WHERE SAL<3500
+
+23.SELECT *
+FROM EMP
+WHERE job='clerk'
+
+24.SELECT EName,sum(sal*12)
+FROM EMP
+GROUP BY EName
+
+26.SELECT deptno,sum(sal)
+FROM Emp
+GROUP BY deptno
+
+27.SELECT empno
+FROM EMP
+WHERE Sal IN(SELECT MIN(Sal) 
+             FROM Emp
+	     GROUP BY Deptno)
+
+28.SELECT AVG(Sal)
+FROM Emp
+WHERE Job='Manager'
+
+29.SELECT SUM(Sal)
+FROM Emp
+WHERE job='SalesMan'
+
+31.
+SELECT COUNT(E.EMPNO),d.deptno,d.dname
+FROM dept d,emp e
+WHERE e.deptno=d.deptno
+GROUP BY d.deptno,d.dname
+
+32.SELECT MAX(SAL)
+FROM EMP
+WHERE Job='Analyst'
+
+34.SELECT COUNT(dname)
+FROM DEPT
+
+35.SELECT EName
+FROM EMP
+WHERE ENAME LIKE '___L%'
+
+
+
+
+
+
+
+
